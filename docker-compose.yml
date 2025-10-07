@@ -1,0 +1,45 @@
+version: "3.8"
+
+services:
+  mc:
+    image: itzg/minecraft-server:latest
+    container_name: mc-java
+    restart: unless-stopped
+    ports:
+      - "25565:25565"   # Minecraft (TCP)
+      - "25575:25575"   # RCON (TCP)
+    environment:
+      EULA: "TRUE"
+      TZ: "America/Sao_Paulo"
+
+      # Versão/engine
+      VERSION: "LATEST"      # ou defina, ex: "1.21.1"
+      TYPE: "PAPER"          # mais performático que vanilla
+
+      # Recursos
+      MEMORY: "1G"
+      USE_AIKAR_FLAGS: "true"
+
+      # Jogo
+      DIFFICULTY: "hard"
+      ONLINE_MODE: "true"    # mantém autenticação oficial da Mojang
+      MAX_PLAYERS: "10"
+      ENABLE_COMMAND_BLOCK: "true"
+
+      # Administração (RCON)
+      ENABLE_RCON: "true"
+      RCON_PASSWORD: "lipelindo"
+      RCON_PORT: "25575"
+
+      # (Opcional) Whitelist:
+      # ENABLE_WHITELIST: "true"
+      # ENFORCE_WHITELIST: "true"
+      # WHITELIST: "Jogador1,Jogador2"
+      # OPS: "SeuNick"  # operador/admin
+
+    volumes:
+      - mc_data:/data
+    stop_grace_period: 1m
+
+volumes:
+  mc_data:
