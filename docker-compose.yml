@@ -14,7 +14,7 @@ services:
 
       # Versão/engine
       VERSION: "1.21.8"      # ou defina, ex: "1.21.1"
-      TYPE: "FORGE"          # mais performático que vanilla
+      TYPE: "FABRIC"          # mais performático que vanilla
 
       # Recursos
       MEMORY: "1G"
