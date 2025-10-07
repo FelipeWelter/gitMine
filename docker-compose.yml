@@ -13,7 +13,7 @@ services:
       TZ: "America/Sao_Paulo"
 
       # Versão/engine
-      VERSION: "1.21.10"      # ou defina, ex: "1.21.1"
+      VERSION: "1.21.9"      # ou defina, ex: "1.21.1"
       TYPE: "FABRIC"          # mais performático que vanilla
 
       # Recursos
