@@ -13,8 +13,8 @@ services:
       TZ: "America/Sao_Paulo"
 
       # Versão/engine
-      VERSION: "LATEST"      # ou defina, ex: "1.21.1"
-      TYPE: "PAPER"          # mais performático que vanilla
+      VERSION: "1.21.8"      # ou defina, ex: "1.21.1"
+      TYPE: "FORGE"          # mais performático que vanilla
 
       # Recursos
       MEMORY: "1G"
